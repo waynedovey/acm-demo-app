@@ -3,7 +3,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
   name: redis-master-app-latest
-  namespace: redis-master
+  namespace: guestbook
 spec:
   type: GitHub
   pathname: https://github.com/rcarrata/acm-demo-app.git

@@ -3,7 +3,7 @@ apiVersion: app.k8s.io/v1beta1
 kind: Application
 metadata:
   name: redis-slave
-  namespace: redis-slave
+  namespace: guestbook
 spec:
   selector:
     matchExpressions:

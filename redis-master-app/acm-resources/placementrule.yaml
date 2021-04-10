@@ -3,7 +3,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
   name: redis-master-pr
-  namespace: redis-master
+  namespace: guestbook
   labels:
     app: redis-master-app
 spec:
