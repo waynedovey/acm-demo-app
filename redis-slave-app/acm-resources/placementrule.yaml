@@ -13,5 +13,5 @@ spec:
       status: "True"
   clusterSelector:
     matchLabels:
-      environment: qa
+      name: aws-sub2
       #vendor: OpenShift
