@@ -1,16 +1,17 @@
+---
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
-  name: redis-slave-app
   namespace: guestbook
+  name: redis-slave-app-subscription-1
+  annotations:
+    apps.open-cluster-management.io/git-branch: main
+    apps.open-cluster-management.io/git-path: redis-slave-app/redis-slave
   labels:
     app: redis-slave-app
-  annotations:
-    apps.open-cluster-management.io/git-path: redis-slave-app/redis-slave
-    apps.open-cluster-management.io/git-branch: master
 spec:
-  channel: redis-slave/redis-slave-app-latest
+  channel: guestbook/redis-slave-app-latest
   placement:
     placementRef:
+      name: redis-slave-app-placement-1
       kind: PlacementRule
-      name: redis-slave-pr

@@ -1,17 +1,13 @@
-
+---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: redis-slave-pr
   namespace: guestbook
+  name: redis-slave-app-placement-1
   labels:
     app: redis-slave-app
 spec:
-  clusterReplicas: 2
-  clusterConditions:
-    - type: ManagedClusterConditionAvailable
-      status: "True"
   clusterSelector:
     matchLabels:
       name: aws-sub2
-      #vendor: OpenShift
+

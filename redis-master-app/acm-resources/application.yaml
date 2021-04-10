@@ -2,15 +2,16 @@
 apiVersion: app.k8s.io/v1beta1
 kind: Application
 metadata:
-  name: redis-master
   namespace: guestbook
+  name: redis-master-app
 spec:
+  componentKinds:
+    - group: apps.open-cluster-management.io
+      kind: Subscription
+  descriptor: {}
   selector:
     matchExpressions:
-    - key: app
-      operator: In
-      values:
-      - redis-master-app
-  componentKinds:
-  - group: apps.open-cluster-management.io
-    kind: Subscription
+      - key: app
+        operator: In
+        values:
+          - redis-master-app
