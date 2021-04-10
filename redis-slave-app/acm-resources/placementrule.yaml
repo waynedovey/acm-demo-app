@@ -1,0 +1,17 @@
+
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: redis-slave-pr
+  namespace: redis-slave
+  labels:
+    app: redis-slave-app
+spec:
+  clusterReplicas: 2
+  clusterConditions:
+    - type: ManagedClusterConditionAvailable
+      status: "True"
+  clusterSelector:
+    matchLabels:
+      environment: qa
+      #vendor: OpenShift

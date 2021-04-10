@@ -1,0 +1,17 @@
+
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: redis-master-pr
+  namespace: redis-master
+  labels:
+    app: redis-master-app
+spec:
+  clusterReplicas: 2
+  clusterConditions:
+    - type: ManagedClusterConditionAvailable
+      status: "True"
+  clusterSelector:
+    matchLabels:
+      environment: qa
+      #vendor: OpenShift

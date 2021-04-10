@@ -1,0 +1,16 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: redis-master-app
+  namespace: redis-master
+  labels:
+    app: redis-master-app
+  annotations:
+    apps.open-cluster-management.io/git-path: redis-master-app/redis-master
+    apps.open-cluster-management.io/git-branch: master
+spec:
+  channel: redis-master/redis-master-app-latest
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: redis-master-pr
