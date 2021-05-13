@@ -15,11 +15,11 @@ spec:
         app: guestbook
         tier: frontend
     spec:
-      serviceAccountName: runasanyuid
+      #serviceAccountName: runasanyuid
       containers:
       - name: php-redis
-        #image: gcr.io/google-samples/gb-frontend:v4
-        image: quay.io/wdovey/gb-frontend:4
+        image: gcr.io/google-samples/gb-frontend:v4
+        #image: quay.io/wdovey/gb-frontend:4
         resources:
           requests:
             cpu: 100m
@@ -32,5 +32,5 @@ spec:
         - name: REDIS_SLAVE_SERVICE_HOST
           value: redis-slave.guestbook.svc.clusterset.local
         ports:
-        - containerPort: 8080
+        - containerPort: 80
 
