@@ -30,4 +30,4 @@ spec:
         - name: REDIS_SLAVE_SERVICE_HOST
           value: redis-slave.guestbook.svc.clusterset.local
         ports:
-        - containerPort: 80
+        - containerPort: 8080
