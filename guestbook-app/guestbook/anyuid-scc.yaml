@@ -3,4 +3,4 @@ kind: SecurityContextConstraints
 metadata:
   name: anyuid
 users:
-- system:serviceaccount:open-cluster-management:runasanyuid
+- system:serviceaccount:guestbook:runasanyuid
