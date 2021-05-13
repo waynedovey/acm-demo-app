@@ -5,7 +5,7 @@ metadata:
   namespace: guestbook
 spec:
   port:
-    targetPort: 8080
+    targetPort: 80
   to:
     kind: Service
     name: frontend
