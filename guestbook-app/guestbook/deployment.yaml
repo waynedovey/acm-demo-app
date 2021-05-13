@@ -29,3 +29,6 @@ spec:
           value: redis-master.guestbook.svc.clusterset.local
         - name: REDIS_SLAVE_SERVICE_HOST
           value: redis-slave.guestbook.svc.clusterset.local
+        - name: PORT
+          value: 8080
+
