@@ -13,4 +13,4 @@ spec:
       status: "True"
   clusterSelector:
     matchLabels:
-      name: cluster-a
+      name: brisbane-cluster
