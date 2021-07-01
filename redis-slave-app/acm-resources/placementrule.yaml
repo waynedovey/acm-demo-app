@@ -8,6 +8,9 @@ metadata:
     app: redis-slave-app
 spec:
   clusterSelector:
-    matchLabels:
-      name: sydney-cluster
-
+    matchExpressions:
+    - key: name
+      operator: In
+      values:
+      - sydney-cluster
+      - bm-cluster

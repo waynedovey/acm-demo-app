@@ -12,11 +12,10 @@ spec:
     - type: ManagedClusterConditionAvailable
       status: "True"
   clusterSelector:
-#    matchLabels:
-#      name: brisbane-cluster
     matchExpressions:
     - key: name
       operator: In
       values:
       - brisbane-cluster
       - sydney-cluster
+      - bm-cluster
